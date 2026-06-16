@@ -1,0 +1,142 @@
+# web-intro-html-5.3
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biểu Mẫu Liên Hệ - Góp Ý</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f6f9;
+      padding: 40px;
+      margin: 0;
+    }
+    .contact-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .contact-container h2 {
+      margin-top: 0;
+      color: #333333;
+      text-align: center;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #495057;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    /* Định dạng riêng cho vùng gõ nội dung dài, cho phép co giãn chiều cao nhưng cố định chiều rộng */
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+    }
+    /* Định dạng khu vực Checkbox */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 4px;
+      cursor: pointer;
+    }
+    .checkbox-group label {
+      display: inline;
+      font-weight: normal;
+      font-size: 13.5px;
+      color: #6c757d;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TODO 1: viết cấu trúc HTML chính -->
+  <div class="contact-container">
+    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+
+    <form action="#" method="post">
+
+      <!-- TODO 2: bổ sung nội dung, bảng, danh sách hoặc form theo đề -->
+      
+      <!-- 1. Ô nhập Họ và Tên -->
+      <div class="form-group">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nhập họ và tên của bạn" required>
+      </div>
+
+      <!-- 2. Ô nhập Email -->
+      <div class="form-group">
+        <label for="emailAddress">Địa chỉ Email:</label>
+        <input type="email" id="emailAddress" name="emailAddress" placeholder="email@vi-du.com" required>
+      </div>
+
+      <!-- 3. Ô TextArea nhập nội dung lời nhắn -->
+      <div class="form-group">
+        <label for="messageContent">Nội dung liên hệ:</label>
+        <textarea id="messageContent" name="messageContent" placeholder="Viết lời nhắn hoặc câu hỏi của bạn tại đây..." required></textarea>
+      </div>
+
+      <!-- 4. Hộp kiểm Checkbox đồng ý điều khoản (Bắt buộc tích chọn mới gửi được form nhờ 'required') -->
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="agreeTerm" name="agreeTerm" required>
+        <label for="agreeTerm">Tôi đồng ý với điều khoản sử dụng và chính sách bảo mật thông tin.</label>
+      </div>
+
+      <!-- 5. Nút gửi thông tin liên hệ -->
+      <button type="submit">Gửi Lời Nhắn</button>
+
+    </form>
+  </div>
+
+  <!-- TODO 3: thêm script nếu đề yêu cầu tương tác -->
+  <script>
+    // In thông báo kiểm tra luồng gửi form trong DevTools khi bấm nút
+    document.querySelector('form').addEventListener('submit', function(e) {
+      console.log("Form liên hệ hợp lệ. Dữ liệu đang được đóng gói để gửi đi...");
+    });
+  </script>
+
+</body>
+</html>
